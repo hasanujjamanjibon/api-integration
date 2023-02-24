@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Integration</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .fishElelement {
+        border: 1px solid #dddd;
+        padding: 1rem;
+        background-color: ghostwhite;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-center py-4 shadow-md mb-7">
+      <h2 class="text-3xl">Meals Data</h2>
+    </div>
+    <div class="input-group mb-3 container w-50">
+      <input
+        id="input-field"
+        type="text"
+        class="form-control"
+        placeholder="Enter Your Topics"
+        aria-label="Recipient's username"
+        aria-describedby="basic-addon2"
+      />
+      <span class="btn btn-info" id="basic-addon2">Search</span>
+    </div>
+    <div
+      id="fishContainer"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 container mx-auto gap-4"
+    ></div>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div id="Modal-body" class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger bg-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto py-6 text-center">
+      <button
+        onclick="showAllData()"
+        id="showAllBtn"
+        class="btn btn-lg btn-success"
+      >
+        SHOW ALL
+      </button>
+    </div>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
