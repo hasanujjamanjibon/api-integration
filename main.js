@@ -47,7 +47,6 @@ function loadModalData(data) {
   modalBody.innerHTML = `
   <img class="w-full h-72" src='${data.strMealThumb}' alt="" />
  `;
-  console.log(data.strMealThumb);
 }
 
 document.getElementById("basic-addon2").addEventListener("click", function () {
